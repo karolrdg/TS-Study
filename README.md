@@ -4,3 +4,4 @@ tsc --init
 tsc (arquivo).ts
 
 node ./arquivo.js
+
