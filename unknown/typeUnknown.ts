@@ -30,7 +30,7 @@ if (typeof algumaCoisaUnknown === 'number') {
   console.log(algumaCoisaUnknown.toFixed());
 }
 
-// ===> Exemplo 04: diferença entre: 'any' vs 'unknown'
+// diferença entre: 'any' vs 'unknown'
 let qualquerValor: any = "Oi!";
 let outroValor: unknown ='oi';
 
