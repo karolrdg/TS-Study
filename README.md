@@ -8,3 +8,5 @@ node ./arquivo.js
 npm init
 
 npm install/i
+ node
+ npm install -g typescript.
