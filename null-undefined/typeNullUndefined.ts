@@ -16,3 +16,26 @@ console.log(typeof variavelTesteUndefined);
 
 console.log('Exemplo 01:', null == undefined);
 console.log('Exemplo 02:', null === undefined);
+
+//ex
+let testeNull = null;
+let testeUndefined;
+
+console.log('Exemplo 03:', testeNull == testeUndefined);
+console.log('Exemplo 04:', testeNull === testeUndefined);
+
+let corPrimaria: string | null = null;
+let corSecundaria: string | undefined;
+
+console.log(corPrimaria);  // null
+console.log(corSecundaria);  // undefined
+
+if (corPrimaria == corSecundaria) {
+    console.log("As cores ainda não foram escolhidas.");
+} else {
+    console.log("Alguma cor já foi escolhida.");
+}
+
+
+
+
