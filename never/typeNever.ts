@@ -63,7 +63,7 @@ function error(message: string): never {
   //console.log(algumaCoisaVoid);
   //console.log(algumaCoisaNever);
 */
-/* //ex
+ /* //ex
   function caixaMagica(mensagem: string): never {
     throw new Error(mensagem);
   }
@@ -71,11 +71,13 @@ function error(message: string): never {
   console.log(caixaMagica('Ocorreu um erro!'));*/
 
 //ex
-const caixaInfinita = function () {
-  // Loop infinito, como uma caixa mágica que nunca para
-  while (true) {
-    console.log('Esta caixa nunca para!');
-  }
-};
-
-//console.log(caixaInfinita());
+    const caixaInfinita = function() {
+        // Loop infinito, como uma caixa mágica que nunca para
+        while (true) {
+          console.log('Esta caixa nunca para!');
+        }
+      };
+      
+      //console.log(caixaInfinita());
+      
+  
