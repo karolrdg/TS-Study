@@ -143,5 +143,49 @@ function criarLivro2(dados: Livro2) {
     );
 
     //+type alias
+
+    //// ==> Exemplo 07 -> tipos de extensões (heranças)
+interface Mae {
+    nome: string;
+  }
+  
+  interface Pai {
+    sobrenome: string;
+  }
+  
+  interface Filha extends Mae, Pai {
+    idade: number;
+  }
+  
+  const filha: Filha = {
+    nome: 'Glaucia',
+    sobrenome: 'Lemos',
+    idade: 35
+  }
+  
+  console.log(filha);
+  
+  interface Veiculo {
+    marca: string;
+  }
+  
+  interface Motor {
+    tipo: string;
+  }
+  
+  interface Carro extends Veiculo, Motor {
+    modelo: string;
+    ano: number;
+  }
+  
+  const meuCarro: Carro = {
+    marca: 'Toyota',
+    tipo: 'Elétrico',
+    modelo: 'Prius',
+    ano: 2022
+  }
+  
+  console.log(meuCarro);
+  
     
 
