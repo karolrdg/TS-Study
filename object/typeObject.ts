@@ -53,10 +53,10 @@ console.log(criarPessoa2({ nome: 'Luiz', sobrenome: 'Miranda', idade: 30 }));
 
 // ==> Exemplo 03 -> object nomeados
 interface Pessoa {
-    nome: string;
-    sobrenome: string;
-    idade: number;
-    }
+  nome: string;
+  sobrenome: string;
+  idade: number;
+}
 function criarPessoa3(dados: Pessoa) {
   return (
     'Dados informativos do ' +
@@ -72,13 +72,56 @@ console.log(criarPessoa3({ nome: 'Luiz', sobrenome: 'Miranda', idade: 30 }));
 
 // Definindo a interface Livro, que será o molde para os objetos do tipo Livro
 interface Livro {
-    titulo: string;
-    autor: string;
-    anoPublicacao: number;
-    editora: string; // Nova propriedade
+  titulo: string;
+  autor: string;
+  anoPublicacao: number;
+  editora: string; // Nova propriedade
 }
 
 function criarLivro(dados: Livro) {
+  return (
+    'Livro: "' +
+    dados.titulo +
+    '", Autor: ' +
+    dados.autor +
+    ', Publicado em: ' +
+    dados.anoPublicacao +
+    ', Editora: ' +
+    dados.editora
+  );
+}
+
+console.log(
+  criarLivro({
+    titulo: 'Dom Quixote',
+    autor: 'Miguel de Cervantes',
+    anoPublicacao: 1605,
+    editora: 'Francisco de Robles',
+  }),
+);
+
+//+exemplos: https://www.typescriptlang.org/docs/handbook/interfaces.html
+/*interface Person {
+    //      ^^^^^^
+    name: string;
+    age: number;
+  }
+  
+  function greet(person: Person) {
+    return "Hello, " + person.name + ' ' + person.age + ' years old';
+  }
+console.log(greet({ name: "John", age: 30 }));*/
+
+// ==> Exemplo 06 -> Propriedade 'readonly' (se deseja proibir que os devs não modifiquem um determinado objeto use o '
+//readonly)
+
+interface Livro2 {
+  readonly titulo: string;
+  autor: string;
+  anoPublicacao: number;
+  editora: string;
+}
+function criarLivro2(dados: Livro2) {
     return (
         'Livro: "' +
         dados.titulo +
@@ -89,8 +132,16 @@ function criarLivro(dados: Livro) {
         ', Editora: ' +
         dados.editora
     );
-}
+    }
+    console.log(
+        criarLivro2({
+            titulo: 'Dom Quixote',
+            autor: 'Miguel de Cervantes',
+            anoPublicacao: 1605,
+            editora: 'Francisco de Robles',
+        }),
+    );
 
-console.log(criarLivro({ titulo: 'Dom Quixote', autor: 'Miguel de Cervantes', anoPublicacao: 1605, editora: 'Francisco de Robles' }));
-
+    //+type alias
+    
 
