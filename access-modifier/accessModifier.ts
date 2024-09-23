@@ -125,3 +125,34 @@ console.log(`Saldo atual: R$${minhaConta.consultarSaldo()}`); // Saldo atual: R$
 
 // Tentando acessar o saldo diretamente
 // console.log(minhaConta.saldo); // ERRO! Não pode acessar diretamente
+
+//protected
+class Estudante_03 {
+  codigoEstudante: number;
+  protected nomeEstudante: string;
+
+  constructor(codigoEstudante: number, nomeEstudante: string) {
+    this.codigoEstudante = codigoEstudante;
+    this.nomeEstudante = nomeEstudante;
+  }
+}
+
+class PessoaEstudante extends Estudante_03 {
+  private curso: string;
+
+  constructor(codigoEstudante: number, nomeEstudante: string, curso: string) {
+    super(codigoEstudante, nomeEstudante);
+    this.curso = curso;
+  }
+
+  retornarDados() {
+    return `Código do Aluno: ${this.codigoEstudante}.
+      Nome do Estudante: ${this.nomeEstudante}.
+      Matéria: ${this.curso}`;
+  }
+}
+
+const estudante_03 = new PessoaEstudante(783212, 'Glaucia Lemos', 'Matemática');
+console.log(estudante_03.retornarDados());
+console.log(estudante_03.codigoEstudante); 
+//console.log(estudante_03.nomeEstudante); // Erro
