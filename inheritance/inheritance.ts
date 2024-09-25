@@ -39,7 +39,7 @@ console.log(funcionario.retornarNome_02());
 //ex
 export {};
 
-class Veiculo {
+/*class Veiculo {
   constructor(
     private marca: string,
     private modelo: string,
@@ -75,3 +75,72 @@ const moto = new Moto('Yamaha', 'MT-07', 689);
 console.log(moto.apresentarVeiculo());
 console.log(moto.retornarNomeCompleto());
 console.log(moto.retornarNome_02());
+*/
+//ex
+// Classe base: Animal
+class Animal {
+  constructor(protected nome: string) {
+    this.nome = nome;
+  }
+
+  // Função que retorna o som genérico de qualquer animal
+  fazerSom(): string {
+    return `${this.nome} faz algum som!`;
+  }
+}
+
+// Classe que herda de Animal: Cachorro
+class Cachorro extends Animal {
+  constructor(nome: string) {
+    super(nome); // Chama o construtor da classe Animal
+  }
+
+  // Função específica do cachorro que faz "au au"
+  fazerSomCachorro(): string {
+    return `${this.nome} faz au au!`;
+   
+  }
+}
+
+// Criando um cachorro chamado "Rex"
+const meuCachorro = new Cachorro('Rex');
+console.log(meuCachorro.fazerSom()); // Isso vem da classe Animal
+console.log(meuCachorro.fazerSomCachorro()); // Isso vem da classe Cachorro
+
+
+// Classe base: Animal
+/*class Animal {
+  private nome: string; // Propriedade nome é privada
+
+  constructor(nome: string) {
+    this.nome = nome;
+  }
+
+  // Getter para acessar o nome
+  protected getNome(): string {
+    return this.nome;
+  }
+
+  // Função que retorna o som genérico de qualquer animal
+  fazerSom(): string {
+    return `${this.getNome()} faz algum som!`;
+  }
+}
+
+// Classe que herda de Animal: Cachorro
+class Cachorro extends Animal {
+  constructor(nome: string) {
+    super(nome); // Chama o construtor da classe Animal
+  }
+
+  // Função específica do cachorro que faz "au au"
+  fazerSomCachorro(): string {
+    return `${this.getNome()} faz au au!`; // Usando o getter para acessar nome
+  }
+}
+
+// Criando um cachorro chamado "Rex"
+const meuCachorro = new Cachorro('Rex');
+console.log(meuCachorro.fazerSom()); // Isso vem da classe Animal
+console.log(meuCachorro.fazerSomCachorro()); // Isso vem da classe Cachorro
+*/
