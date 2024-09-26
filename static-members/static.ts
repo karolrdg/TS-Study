@@ -76,3 +76,58 @@ const carro_03 = new Carro('Strada', 2022, ['Caminhonete']);
 carro_01.exibirInformacao();  // Mostra: O carro Civic foi fabricado no ano de 2021.
 carro_02.exibirInformacao();  // Mostra: O carro T-Cross foi fabricado no ano de 2023.
 carro_03.exibirInformacao();  // Mostra: O carro Strada foi fabricado no ano de 2022.
+
+// ==> Exemplo - Livros mágicos
+
+// Imagine que temos diferentes tipos de histórias que os livros podem contar.
+// Eles podem ser sobre "Aventura", "Mistério", "Heróis", "Fadas", ou "Dinossauros".
+type Genero = 'Aventura' | 'Mistério' | 'Heróis' | 'Fadas' | 'Dinossauros';
+
+// Estamos criando uma "fábrica de livros mágicos", chamada Livro.
+class Livro {
+  // Cada livro vai ter um nome, o nome da pessoa que escreveu (autor), e o tipo de história (gênero).
+  public nome: string; // Nome do livro, como "Histórias do Mundo Mágico"
+  public autor: string; // Nome do autor, como "João"
+  public generos: Genero[]; // Tipo de história que o livro conta, como "Aventura"
+
+  // Aqui temos uma contagem de quantos livros mágicos já foram criados.
+  // Isso é como um contador de brinquedos! Toda vez que criamos um novo livro, esse número aumenta.
+  public static TOTAL_LIVROS = 0;
+
+  // O construtor é como uma máquina de brinquedos.
+  // Quando você cria um novo livro, ele coloca o nome, o autor e o tipo de história no livro.
+  constructor(nome: string, autor: string, generos: Genero[]) {
+    this.nome = nome;  // Dá um nome ao livro
+    this.autor = autor; // Coloca o nome do autor do livro
+    this.generos = generos; // Escolhe o tipo de história que o livro conta
+
+    // A cada livro novo que a gente cria, o contador TOTAL_LIVROS aumenta.
+    Livro.TOTAL_LIVROS++;
+    // Aqui, ele fala quantos livros mágicos já estão na prateleira!
+    console.log(`Nós já criamos ${Livro.TOTAL_LIVROS} livros mágicos!`);
+  }
+
+  // Esse é o jeito de "falar" com o livro.
+  // Quando você pergunta a ele, ele responde com o nome e quem o escreveu.
+  public exibirInformacao(): void {
+    console.log(`O livro mágico chamado "${this.nome}" foi escrito por ${this.autor}.`);
+  }
+}
+
+// Agora, vamos criar três livros mágicos!
+
+// Primeiro, criamos um livro chamado "A Aventura das Fadas", escrito pela Maria.
+const livro1 = new Livro('A Aventura das Fadas', 'Maria', ['Fadas', 'Aventura']);
+
+// Depois, criamos um livro chamado "O Mistério do Castelo", escrito pelo Pedro.
+const livro2 = new Livro('O Mistério do Castelo', 'Pedro', ['Mistério', 'Heróis']);
+
+// Por último, criamos um livro chamado "Dinossauros no Espaço", escrito pela Ana.
+const livro3 = new Livro('Dinossauros no Espaço', 'Ana', ['Dinossauros', 'Aventura']);
+
+// Agora, se a gente pegar qualquer livro da prateleira e perguntar, ele vai dizer quem o escreveu!
+
+livro1.exibirInformacao();  // Ele fala: "O livro mágico chamado 'A Aventura das Fadas' foi escrito por Maria."
+livro2.exibirInformacao();  // Ele fala: "O livro mágico chamado 'O Mistério do Castelo' foi escrito por Pedro."
+livro3.exibirInformacao();  // Ele fala: "O livro mágico chamado 'Dinossauros no Espaço' foi escrito por Ana."
+
