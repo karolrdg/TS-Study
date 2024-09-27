@@ -1,3 +1,4 @@
+export {};
 // ==> Exemplo 01- Modificador: public
 class Estudante {
   codigoEstudante: number;
