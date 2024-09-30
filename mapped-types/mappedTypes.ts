@@ -55,5 +55,6 @@ const livro: LivroModelo = {
   numeroPaginas: 324,
   preco: 19.99,
   titulo: 'Programming Typescript: Making Your JavaScript Applications Scale',
-};
+}; 
+console.log(livro);
 
