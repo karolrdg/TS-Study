@@ -47,14 +47,26 @@ interface Livro {
 }
 
 type Artigo = Omit<Livro, 'numeroPaginas'>;
+const artigo: Artigo = {
+    autor: 'Boris Cherny',
+    preco: 19.99,
+    titulo: 'Programming Typescript: Making Your JavaScript Applications Scale',
+  };
+  
+  console.log(artigo);  // Aqui o número de páginas será omitido
+  
 
-type LivroModelo = Readonly<Livro>;
+//type LivroModelo = Readonly<Livro>;
 
-const livro: LivroModelo = {
+/*const livro: LivroModelo = {
   autor: 'Boris Cherny',
   numeroPaginas: 324,
   preco: 19.99,
   titulo: 'Programming Typescript: Making Your JavaScript Applications Scale',
 }; 
-console.log(livro);
+console.log()
+*/
+
+
+
 
