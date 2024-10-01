@@ -6,4 +6,4 @@ var pessoa = {
     residenciaAtual: { x: 10, y: 20 }, // Coordenadas da cidade (CidadeCoordenadas)
 }; // Verificação de que o objeto atende às regras do tipo Pessoa
 // Imprimindo o nome da cidade de nascimento em maiúsculas
-console.log(pessoa.localNascimento.toUpperCase()); //"RIO DE JANEIRO"
+console.log(pessoa.localNascimento.toUpperCase()); // IÇARA
