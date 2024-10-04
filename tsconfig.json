@@ -3,7 +3,7 @@
     "target": "ES2020",
     "module": "CommonJS",
     "lib": ["ESNext", "DOM"],
-    "outDir": "./dist",
+    "outDir": "out",
     "removeComments": true,
     "noEmitOnError": true,
     "strict": true,
